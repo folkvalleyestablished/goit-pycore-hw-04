@@ -41,6 +41,11 @@ def main():
 
     while True:
         user_input = input("Enter a command: ")
+
+        if not user_input.strip():
+            print("Invalid command.")
+            continue
+
         command, *args = parse_input(user_input)
 
         if command in ["close", "exit"]:
